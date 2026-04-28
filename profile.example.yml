@@ -1,0 +1,49 @@
+# Профиль кандидата — скопируй в profile.yml и заполни своими данными
+# cp config/profile.example.yml config/profile.yml
+
+candidate:
+  full_name: ""          # Имя Фамилия
+  email: ""
+  phone: ""
+  location: "Москва"
+  website: ""
+  telegram: ""
+  linkedin: ""
+
+target_roles:
+  primary:
+    - "Менеджер по внедрению ИИ"
+    - "Операционный менеджер / BizOps"
+    - "Growth Manager"
+  secondary:
+    - "Руководитель лидогенерации"
+    - "Sales Operations Manager"
+  adjacent:
+    - "B2B Marketing Manager"
+    - "No-code / Automation Specialist"
+
+positioning:
+  headline: "Твой один оффер — чем ты полезен бизнесу"
+  strengths:
+    - "Навык 1"
+    - "Навык 2"
+    - "Навык 3"
+  not_a_fit:
+    - "Роли которые не подходят"
+
+compensation:
+  currency: "RUB"
+  salary_from: 200000
+  salary_to: 400000
+  gross: true
+
+location:
+  city: "Москва"
+  area_id: 1            # 1=Москва, 2=СПб, 113=Россия
+  remote_ok: true
+  relocation: false
+
+# AdsPower
+adspower:
+  profile_id: ""        # ID профиля AdsPower для откликов
+  profile_no: ""        # Номер профиля

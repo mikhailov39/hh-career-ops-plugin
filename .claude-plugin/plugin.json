@@ -1,0 +1,11 @@
+{
+  "name": "hh-career-ops",
+  "version": "0.1.0",
+  "description": "AI-powered job search system for hh.ru — поиск вакансий через API, 6-блочная оценка, генерация CV, отклики через AdsPower",
+  "author": {
+    "name": "Mikhailov Mikhail"
+  },
+  "homepage": "https://github.com/mikhailov39/hh-career-ops",
+  "repository": "https://github.com/mikhailov39/hh-career-ops",
+  "keywords": ["hh.ru", "job-search", "russia", "recruiting", "ai", "adspower"]
+}

@@ -1,0 +1,75 @@
+# Поисковые запросы для hh.ru API
+# area: 1 = Москва, 2 = СПб, 113 = Россия
+# experience: noExperience, between1And3, between3And6, moreThan6
+
+defaults:
+  area: 1
+  salary_from: 200000
+  per_page: 100
+  order_by: relevance
+
+queries:
+  # Топ-приоритет: AI + бизнес
+  - text: "менеджер по внедрению ИИ"
+    priority: 1
+  - text: "AI manager"
+    priority: 1
+  - text: "automation manager"
+    priority: 1
+
+  # Высокий приоритет: Operations
+  - text: "операционный менеджер автоматизация"
+    priority: 2
+  - text: "growth manager"
+    priority: 2
+  - text: "руководитель лидогенерации"
+    priority: 2
+
+  # Средний приоритет: Sales/Rev Ops
+  - text: "sales operations"
+    priority: 3
+  - text: "revenue operations"
+    priority: 3
+  - text: "B2B marketing manager"
+    priority: 3
+
+  # Расширенный поиск: инструменты
+  - text: "автоматизация бизнес-процессов"
+    priority: 4
+  - text: "no-code автоматизация"
+    priority: 4
+  - text: "Make.com"
+    priority: 4
+  - text: "ChatGPT"
+    priority: 4
+  - text: "Claude AI"
+    priority: 4
+
+filters:
+  title_positive:
+    - "менеджер"
+    - "руководитель"
+    - "manager"
+    - "head"
+    - "lead"
+    - "director"
+    - "operations"
+    - "growth"
+    - "автоматизация"
+    - "AI"
+    - "ИИ"
+
+  title_negative:
+    - "junior"
+    - "стажёр"
+    - "стажер"
+    - "intern"
+    - "ML engineer"
+    - "data scientist"
+    - "LLM engineer"
+    - "python developer"
+    - "разработчик"
+    - "программист"
+    - "DevOps"
+    - "QA"
+    - "тестировщик"

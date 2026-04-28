@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    font-size: 10pt;
+    line-height: 1.4;
+    color: #1a1a1a;
+    padding: 20mm 18mm;
+  }
+
+  h1 {
+    font-size: 18pt;
+    font-weight: 700;
+    color: #0d47a1;
+    margin-bottom: 2mm;
+  }
+
+  h2 {
+    font-size: 11pt;
+    font-weight: 600;
+    color: #0d47a1;
+    border-bottom: 1px solid #0d47a1;
+    padding-bottom: 1mm;
+    margin-top: 5mm;
+    margin-bottom: 3mm;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  h3 {
+    font-size: 10.5pt;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-top: 3mm;
+    margin-bottom: 1mm;
+  }
+
+  .contacts {
+    font-size: 9pt;
+    color: #555;
+    margin-bottom: 3mm;
+  }
+
+  .contacts a {
+    color: #0d47a1;
+    text-decoration: none;
+  }
+
+  .summary {
+    font-size: 10pt;
+    color: #333;
+    margin-bottom: 3mm;
+    padding: 2mm 0;
+  }
+
+  .job {
+    margin-bottom: 4mm;
+  }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .job-title {
+    font-weight: 600;
+    font-size: 10.5pt;
+  }
+
+  .job-dates {
+    font-size: 9pt;
+    color: #666;
+    white-space: nowrap;
+  }
+
+  .job-company {
+    font-size: 9.5pt;
+    color: #555;
+    margin-bottom: 1mm;
+  }
+
+  ul {
+    padding-left: 5mm;
+    margin-top: 1mm;
+  }
+
+  li {
+    margin-bottom: 0.5mm;
+    font-size: 9.5pt;
+  }
+
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2mm;
+    margin-top: 1mm;
+  }
+
+  .skill-tag {
+    background: #e3f2fd;
+    color: #0d47a1;
+    padding: 1mm 3mm;
+    border-radius: 2mm;
+    font-size: 9pt;
+  }
+
+  .education-item {
+    margin-bottom: 2mm;
+  }
+</style>
+</head>
+<body>
+
+<h1>{{NAME}}</h1>
+<div class="contacts">
+  {{CONTACTS}}
+</div>
+
+<div class="summary">
+  {{SUMMARY}}
+</div>
+
+<h2>Опыт работы</h2>
+{{EXPERIENCE}}
+
+<h2>Навыки</h2>
+<div class="skills-grid">
+  {{SKILLS}}
+</div>
+
+<h2>Образование</h2>
+{{EDUCATION}}
+
+{{ADDITIONAL}}
+
+</body>
+</html>
