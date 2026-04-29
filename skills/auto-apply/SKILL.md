@@ -182,8 +182,12 @@ node plugin/hh-career-ops/scripts/sheets-helper.mjs create-sheet \
 node plugin/hh-career-ops/scripts/sheets-helper.mjs append \
   --id={spreadsheet_id} \
   --tab={tab} \
-  --rows='[[N, "YYYY-MM-DD", "Компания", "Должность", "Статус", "HH_ID", "URL"], ...]'
+  --rows='[["YYYY-MM-DD", "Компания", "Должность", "Статус", "HH_ID", "URL"], ...]'
 ```
+
+Колонки Sheet (6): `Date | Company | Title | Status | HH ID | URL` (без `#` — порядок строк = порядок добавления).
+
+Для больших батчей (>50 строк) используй `--rows-file=path/to/rows.json` вместо `--rows='...'` (Windows command-line limit).
 
 Скрипт использует service account из `secrets/google-sa.json` (или `GOOGLE_SA_PATH` env).
 

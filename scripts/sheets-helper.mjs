@@ -162,8 +162,10 @@ try {
     console.log(JSON.stringify(out));
   } else if (cmd === 'append') {
     if (!args.id) { console.error('--id required'); process.exit(1); }
-    if (!args.rows) { console.error('--rows JSON required'); process.exit(1); }
-    const rows = JSON.parse(args.rows);
+    let rowsJson = args.rows;
+    if (!rowsJson && args['rows-file']) rowsJson = fs.readFileSync(args['rows-file'], 'utf8');
+    if (!rowsJson) { console.error('--rows JSON or --rows-file required'); process.exit(1); }
+    const rows = JSON.parse(rowsJson);
     const tab = args.tab || 'Tracker';
     const out = await appendRows({ id: args.id, tab, rows, sa: args.sa });
     console.log(JSON.stringify(out));
@@ -174,8 +176,10 @@ try {
     console.log(JSON.stringify(out));
   } else if (cmd === 'replace') {
     if (!args.id) { console.error('--id required'); process.exit(1); }
-    if (!args.rows) { console.error('--rows JSON required'); process.exit(1); }
-    const rows = JSON.parse(args.rows);
+    let rowsJson = args.rows;
+    if (!rowsJson && args['rows-file']) rowsJson = fs.readFileSync(args['rows-file'], 'utf8');
+    if (!rowsJson) { console.error('--rows JSON or --rows-file required'); process.exit(1); }
+    const rows = JSON.parse(rowsJson);
     const tab = args.tab || 'Tracker';
     const out = await replaceRows({ id: args.id, tab, rows, sa: args.sa });
     console.log(JSON.stringify(out));
